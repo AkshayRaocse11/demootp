@@ -18,26 +18,54 @@
             body {
                 font-family: 'Nunito';
             }
+            body, html {
+      height: 100%;
+      margin: 0;
+    }
+    
+    .bg {
+      /* The image used */
+      background-image: url("https://static01.nyt.com/images/2020/06/30/business/30ontech/30ontech-superJumbo.jpg?quality=90&auto=webp");
+    
+      /* Full height */
+      height: 100%; 
+    
+      /* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
         </style>
     </head>
     <body class="antialiased">
+        <div class="bg">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
 
-
+            
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                Delievry App Managment <br>
-            @if (Route::has('login'))
-                    @auth
-                        <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline mt-5">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 underline mt-5">Login</a>
+                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                    <div class="card-header">Delievry App Managment</div>
+                    <div class="card-body">
+                      <h5 class="card-title">Welcome/h5>
+                      <p class="card-text">Provide Valid Email for Login , You wil get OTP to Login</p>
+                      @if (Route::has('login'))
+                      @auth
+                          <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline mt-5">Home</a>
+                      @else
+                          <a href="{{ route('login') }}" class="text-sm text-gray-700 underline mt-5">Login</a>
+  
+                          @if (Route::has('register'))
+                              <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline mt-5">Register</a>
+                          @endif
+                      @endauth
+              @endif
+                    </div>
+                  </div>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline mt-5">Register</a>
-                        @endif
-                    @endauth
-            @endif
+                 <br>
+
             </div>
         </div>
+    </div>
     </body>
 </html>
