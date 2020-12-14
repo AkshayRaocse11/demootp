@@ -27,7 +27,16 @@
                                 <tr>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>{{ $user->role }}</td>
+                                    <td>
+                                    if($user->role == 1 ){
+                                    Customer
+                                    }
+                                    else{
+                                        Delievery Agent
+                                    }
+                                    
+                                    
+                                    </td>
                                     <td>{{ $user->mobile_number }}</td>
                                     <td>{{ $user->location }}</td>
                                     <td>
