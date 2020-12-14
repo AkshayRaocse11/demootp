@@ -28,12 +28,13 @@
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>
-                                    if($user->role == 1 ){
+                                    @if($user->role == 1 ){
                                     Customer
                                     }
-                                    else{
+                                    @else{
                                         Delievery Agent
                                     }
+                                    @endif
                                     
                                     
                                     </td>
