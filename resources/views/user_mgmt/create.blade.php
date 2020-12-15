@@ -46,7 +46,7 @@
                         <div class="form-group">
                             <label class="col-sm-12">Role</label>
                             <div class="col-sm-12">
-                                <select class="form-control form-control-line" name="is_admin">
+                                <select class="form-control form-control-line" name="role">
                                     <option value="1">Customer</option>
                                     <option value="2">Delivery Agent</option>
                                 </select>

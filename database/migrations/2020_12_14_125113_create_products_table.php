@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('product')->nullable();
             $table->string('delievery_status')->nullable();
             $table->string('price')->nullable();
+            $table->string('date')->nullable();
             $table->timestamps();
         });
     }

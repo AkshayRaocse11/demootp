@@ -33,6 +33,12 @@
                                 </select>
                             </div>
                         </div>    
+                        <div class="form-group">
+                            <label class="col-sm-12">Date</label>
+                            <div class="col-sm-12">
+                                <input type="date" name="date" class="form-control">
+                            </div>
+                        </div>                            
                         <button type="submit" class="btn btn-sm btn-success float-right">Submit</button>
                     </form>                  
                 </div>

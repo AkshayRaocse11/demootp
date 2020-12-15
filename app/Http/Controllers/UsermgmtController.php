@@ -35,6 +35,7 @@ class UsermgmtController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         User::create( $request->all());
         $notification = array(
         'message' => 'User Created Successfully!',

@@ -21,11 +21,15 @@ Route::get(
 [VerifyOTPController::class, 'showVerifyForm']
 );
 
+
+
 Route::post('/resend_OTP',[ResendOTPController::class, 'resend']
 );
 
 
 Route::middleware(['TwoFA'])->group(function () {
+    Route::get('/admin/revenue', [App\Http\Controllers\HomeController::class, 'rev_index']);
+    Route::get('/admin/revenue/download', [App\Http\Controllers\HomeController::class, 'export']);
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::prefix('admin')->name('admin.')->group(function () {
           Route::resource('user', UsermgmtController::class);
